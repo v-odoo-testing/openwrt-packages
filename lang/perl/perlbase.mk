@@ -588,7 +588,7 @@ endef
 define Package/perlbase-extutils/install
 $(call perlmod/Install,$(1),ExtUtils,ExtUtils/MakeMaker/FAQ.pod ExtUtils/MakeMaker/Tutorial.pod ExtUtils/ParseXS.pm ExtUtils/ParseXS/Utilities.pm)
 $(call perlmod/Install/NoStrip,$(1),ExtUtils/ParseXS.pm ExtUtils/ParseXS/Utilities.pm,)
-$(call perlmod/InstallBaseTests,$(1),cpan/ExtUtils-Command/t cpan/ExtUtils-Constant/t cpan/ExtUtils-Install/t cpan/ExtUtils-MakeMaker/t cpan/ExtUtils-Manifest/t dist/ExtUtils-CBuilder/t dist/ExtUtils-ParseXS/t lib/ExtUtils/t lib/h2ph.t lib/h2xs.t utils/h2ph utils/h2xs)
+$(call perlmod/InstallBaseTests,$(1),cpan/ExtUtils-Constant/t cpan/ExtUtils-Install/t cpan/ExtUtils-MakeMaker/t cpan/ExtUtils-Manifest/t dist/ExtUtils-CBuilder/t dist/ExtUtils-ParseXS/t lib/ExtUtils/t lib/h2ph.t lib/h2xs.t utils/h2ph utils/h2xs)
 endef
 
 $(eval $(call BuildPackage,perlbase-extutils))
